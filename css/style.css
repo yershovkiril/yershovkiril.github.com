@@ -1,0 +1,92 @@
+.top{
+	width: 50%;
+	margin: 0 auto;
+}
+
+.top:after, .middle:after{
+	display: block;
+    content: '';
+    clear: both;
+}
+.middle{
+	width: 50%;
+	margin: 0 auto;
+}
+.tagButtonNode{
+	margin-right: 10px;
+	display: inline-block;
+}
+
+.tag{
+	display: inline-block;
+	background-color: #989897;
+	border: 2px solid #898988;
+	border-radius: 2px;
+	padding: 0 3px;
+	color: white;
+	font-size: 15px;
+	position: relative;
+}
+
+.active{
+	border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: 0;
+}
+
+.statusCaontainer{
+	margin-bottom: 10px;
+}
+
+.status{
+	color: #3247FF;
+	border-bottom: 1px dashed;
+	cursor: pointer;
+}
+
+.tagContainer{
+	margin-bottom: 10px; 
+}
+
+input{
+	width: 70%;
+	padding: 6px 12px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: #878786;
+    display: none;
+}
+
+button.add{
+	background: #56B8E0;
+	padding: 7px 12px;
+	border-radius: 4px;
+	color: white;
+	border:0;
+	border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    display: none;
+    cursor: pointer;
+}
+
+button{
+	background-color: #989897;
+	border: 2px solid #898988;
+	border-radius: 2px;
+	padding: 0 3px;
+	color: white;
+	font-size: 15px; 
+	border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    position: relative;
+    top: 1px;
+    right: 2px;
+    cursor: pointer;
+    display: none;
+}
+
+.visible{
+	display: inline-block;
+}
