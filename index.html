@@ -2,20 +2,94 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<script src="./js/tagList.js"></script>
-	<script src="./js/jquery.min.js"></script>
+	<title>Kiril - Responsive creative CV</title>
+	<script src="./js/lib/jquery-1.11.0.min.js"></script>
+	<script src="./js/portfolio.js"></script>
 	<link rel="stylesheet" href="css/style.css">
-	<title>Tag List</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="top"></div>
-<div class="middle"></div>
-<div class="bottom"></div>
-<script>
-	var tagList1 = new tagList($('.top'), ['lorem', 'ipsum']);
-	var tagList2 = new tagList($('.middle'), ['facebook', 'vkontakte', 'insta']);
+	<div class="main-container-fluid">	
+		<div class="row">
+			<div class="about-me col-lg-4 col-md-4 col-sm-4">
+				<div class="summary">
+					<div class="photo">
+						<img class="portfolio-img" src="./photo.png" alt="мое фото">
+					</div>
+					<a href="#">
+							<img class="logo" src="./label.png" alt="Kiril Yershov">
+					</a>
+					<div class="dev">
+						<span>Front-End Developer</span>
+					</div>	
+				</div>
+				<div class="greeting">
+					<p class="hi">
+						<span class="first-word">Hi</span>
+						<span class="else-text"></span>
+					</p>
+				</div>
+				<div class="button">
+					<a href="#" class="download">Download CV
+					<span class="load-logo"></span>
+					</a>
+				</div>
+				<div class="footer-content">
+					<div class="share">
+						<a href="https://vk.com/id8139656" class="social vkontakte"></a>
+						<a href="https://ua.linkedin.com/pub/kiril-yershov/a2/466/a77" class="social linkedIn"></a>			
+						<a href="https://www.facebook.com/kiril.yershov" class="social facebook"></a>
+						<a href="#" class="social skype"></a>
+					</div>
+				</div>	
+			</div>
+			<div class="features col-lg-8 col-md-8 col-sm-8">
+				<div class="row">
+					<div class="resume col-lg-4 col-md-4 col-sm-4">
+						<div class="resume-container">
+							<div class="top-resume">
+								<h1>RESUME</h1>
+								<div class="detail">View my resume</div>
+							</div>
+							<div class="icon icon-resume"></div>
+						</div>
+						<div class="main-content">
+							<h1>MY RESUME</h1>
+							<div class="expirience col-lg-6"></div>
+							<div class="skills col-lg-5"></div>
+						</div>
+					</div>
+					<div class="portfolio col-lg-4 col-md-4 col-sm-4">
+						<div class="portfolio-container">
+							<div class="top-portfolio">
+								<h1>PORTFOLIO</h1>
+								<div class="detail">View my portfolio</div>
+							</div>
+							<div class="icon icon-portfolio"></div>
+						</div>
+						<div class="main-content">
+							
+						</div>
+					</div>
+					<div class="contact col-lg-4 col-md-4 col-sm-4">
+						<div class="contact-container">
+							<div class="top-contact">
+								<h1>CONTACT</h1>
+								<div class="detail">View my contacts</div>
+							</div>
+							<div class="icon icon-contact"></div>
+						</div>
+						<div class="main-content">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-</script>
+	<script src="./js/lib/bootstrap.min.js"></script>
+	<script>
+		window.pf = new portfolio();
+	</script>
 </body>
 </html>
-

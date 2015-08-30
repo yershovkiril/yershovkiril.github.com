@@ -1,92 +1,185 @@
-.top{
-	width: 50%;
-	margin: 0 auto;
+@font-face {
+    font-family: Billabong; /* Гарнитура шрифта */
+    src: url(./fonts/hpfluhSd.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: VellgishFont; /* Гарнитура шрифта */
+    src: url(./fonts/FAGhM22r.ttf); /* Путь к файлу со шрифтом */
 }
 
-.top:after, .middle:after{
+@font-face {
+    font-family: fectus!; /* Гарнитура шрифта */
+    src: url(./fonts/c31vSvDU.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: APCCourier-Regular; /* Гарнитура шрифта */
+    src: url(./fonts/HxT18F53.ttf); /* Путь к файлу со шрифтом */
+}
+div h1{
+	font-family: 'VellgishFont', serif;
+	color: white;
+	text-align: center;
+	margin-top: 40px;
+}
+
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.eot?v=4.1.0');
+  src: url('http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'), url('http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/onts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.resume{
+	background: #19A3D9;
+}
+.portfolio{
+	background: #33ADDD;
+}
+.contact{
+	background: #4CB7E1;
+}
+.row > div {
+	 height:100vh;
+	 cursor: pointer;
+}
+.photo{
+	text-align: center;	
+}
+.detail{
+	text-align: center;
+	color: white;
+	font-family: "APCCourier-Regular";
+	font-size: 18px;
+	opacity: 0;
+	margin-top: -10px;
+}
+.icon{
+  font-family: FontAwesome;
+  color: rgba(255,255,255,.5);
+  font-size: 50px;
+  position: absolute;
+  bottom: 50px;
+  transition: 0.2s color ease;  
+  left: 50%;
+    margin-left: -25px;
+}
+.logo{
+	width: 190px;
+    display: block;
+    margin: 0 auto 10px;
+    opacity: .85
+}
+.dev>span{
 	display: block;
-    content: '';
-    clear: both;
+    color: #6F6F6F;
+    text-align: center;
 }
-.middle{
-	width: 50%;
-	margin: 0 auto;
+.icon-resume:before{
+	content: "\f016";
 }
-.tagButtonNode{
-	margin-right: 10px;
-	display: inline-block;
+.icon-portfolio:before{
+	content: "\f0b1";
+}
+.icon-contact:before{
+	content: "\f003";
+}
+.portfolio-img{
+	width: 110px;
+}
+.summary{
+	margin-top: 50px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 30px;
 }
 
-.tag{
-	display: inline-block;
-	background-color: #989897;
-	border: 2px solid #898988;
-	border-radius: 2px;
-	padding: 0 3px;
-	color: white;
-	font-size: 15px;
+.first-word{
+    font-size: 57px;
+    line-height: 5.5rem;
+    padding-right: 7px;
+    font-family: TIME;
+    float: left;
+}
+.else-text{
+    font-size: 20px;
+    font-family: TIMES;
+}
+
+.hi {
+	padding: 0 75px;
+	height: 140px;
+	border-bottom: 1px solid #ddd;
+}
+
+.button{
+	margin-top: 30px;
+}
+.download{
 	position: relative;
+	padding: 15px 20px 15px 0px;
+    border: 1px solid #BBBBBB;
+    color: #BBBBBB;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 170px;
 }
 
-.active{
-	border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    margin-right: 0;
+.download:hover{
+	text-decoration: none;
+	color: #BBBBBB;
 }
 
-.statusCaontainer{
-	margin-bottom: 10px;
+.load-logo {
+  font-family: FontAwesome;
+  color: #BBBBBB;
+  position: absolute;
+  right: 24px;
+  
+}
+a.social.skype{
+	right: 47%;
+}
+a.social.vkontakte{
+	right: 41%;
+}
+a.social.facebook{
+	right: 57%;
+}
+a.social.linkedIn{
+	right: 52%;
+}
+.social{
+  font-family: FontAwesome;
+  color: #19A3D9;
+  position: absolute;
+  bottom: 40px;
+  font-size: 20px;
 }
 
-.status{
-	color: #3247FF;
-	border-bottom: 1px dashed;
-	cursor: pointer;
+.skype:before{
+ content: "\f17e";
+}
+.vkontakte:before{
+	content: "\f189";
+}
+.load-logo:before {
+    content: "\f019";
 }
 
-.tagContainer{
-	margin-bottom: 10px; 
+.facebook:before {
+    content: "\f09a";
 }
 
-input{
-	width: 70%;
-	padding: 6px 12px;
-	border-radius: 4px;
-	border: 1px solid #ccc;
-	border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    color: #878786;
-    display: none;
+.linkedIn:before{
+	content: "\f08c";
 }
 
-button.add{
-	background: #56B8E0;
-	padding: 7px 12px;
-	border-radius: 4px;
-	color: white;
-	border:0;
-	border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    display: none;
-    cursor: pointer;
-}
-
-button{
-	background-color: #989897;
-	border: 2px solid #898988;
-	border-radius: 2px;
-	padding: 0 3px;
-	color: white;
-	font-size: 15px; 
-	border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    position: relative;
-    top: 1px;
-    right: 2px;
-    cursor: pointer;
-    display: none;
-}
-
-.visible{
-	display: inline-block;
+.main-content{
+	opacity: 0;
+	overflow: hidden;
 }
