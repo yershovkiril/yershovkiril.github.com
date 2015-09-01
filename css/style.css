@@ -31,7 +31,13 @@ div h1{
   font-weight: normal;
   font-style: normal;
 }
-
+div.about-me{
+	padding-right: 0;
+	border-right: 1px solid #ddd;
+}
+.row {
+	margin: 0;
+}
 .resume{
 	background: #19A3D9;
 }
@@ -44,6 +50,8 @@ div h1{
 .row > div {
 	 height:100vh;
 	 cursor: pointer;
+	 padding: 0;
+	 
 }
 .photo{
 	text-align: center;	
@@ -181,5 +189,144 @@ a.social.linkedIn{
 
 .main-content{
 	opacity: 0;
-	overflow: hidden;
+	background: white;
+	display: none;
+	cursor: default;
+}
+
+.container-info-title{
+	color: #19A3D9;
+	font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.ed-title{
+	text-transform: uppercase;
+	text-transform: uppercase;
+    font-size: 17px;
+    font-weight: bolder;
+}
+.ed-description{
+	padding: 15px 20px;
+    background-color: #EAEAEA;
+    border-radius: 4px;
+    margin-top: 15px;
+    position: relative;
+    width: 94%;
+}
+.ed-year{
+	margin-top: 5px;
+	color: #999999;
+	font-weight: bolder;	
+}
+.ed-description::before{
+	content: '';
+	position: absolute;
+	background: #EAEAEA;
+	height: 18px;
+    width: 15px;
+    top: -8px;
+    left: 25px;
+	transform: rotate(135deg);
+	 -webkit-transform: rotate(135deg);
+}
+.ed-info{
+	padding-left: 70px;
+}
+.main-title{
+	color: #19A3D9;
+	margin-top: 0;
+	text-align: left;
+}
+
+.case{
+	font-family: FontAwesome;
+    top: 0px;
+    color: white;
+    position: absolute;
+    background-color: #19A3D9;
+    width: 50px;
+    border-radius: 50px;
+    height: 50px;
+}
+.case:before {
+	position: absolute;
+    content: "\f0b1";
+    left: 13px;
+    top: 9px;
+    font-size: 25px;
+}
+.ed-item{
+	position: relative;
+	margin-bottom: 25px;
+}
+.item-container{
+	position: relative;
+
+}
+
+.item-container:before{
+	content: "";
+    height: 100%;
+    width: 3px;
+    background: #dfdfdf;
+    position: absolute;
+    left: 23px;
+    top: 0;
+    bottom: 0;
+}
+
+.close-content{
+	position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #9F9F9F;
+    font-size: 32px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px;
+}
+.skill-title{
+	color: #bbb;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+.skill-bar-main{
+	width: 100%;
+    height: 16px;
+    background: #dfdfdf;
+    border-radius: 3px;
+}
+.skill-bar-web{
+	width: 80%;
+    height: 16px;
+    background: #19A3D9;
+    border-radius: 3px;
+}
+.skill-bar-js{
+	width: 70%;
+    height: 16px;
+    background: #19A3D9;
+    border-radius: 3px;
+}
+.skill-bar-boot{
+	width: 50%;
+    height: 16px;
+    background: #19A3D9;
+    border-radius: 3px;
+}
+
+div.skills.col-lg-5{
+	padding-bottom: 40px;
+	margin-bottom: 30px;
+	height: 100%;
+	border-bottom: 1px solid #ddd;
+	margin-left: 18px;
+}
+
+.main-content{
+  -vendor-animation-duration: 10s;
+  -vendor-animation-delay: 12s;
+  -vendor-animation-iteration-count: infinite;
 }

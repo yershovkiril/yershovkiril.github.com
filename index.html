@@ -5,8 +5,10 @@
 	<title>Kiril - Responsive creative CV</title>
 	<script src="./js/lib/jquery-1.11.0.min.js"></script>
 	<script src="./js/portfolio.js"></script>
-	<link rel="stylesheet" href="css/style.css">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.css">
+	
 </head>
 <body>
 	<div class="main-container-fluid">	
@@ -44,6 +46,7 @@
 				</div>	
 			</div>
 			<div class="features col-lg-8 col-md-8 col-sm-8">
+			<span class="close-content">X</span>
 				<div class="row">
 					<div class="resume col-lg-4 col-md-4 col-sm-4">
 						<div class="resume-container">
@@ -54,9 +57,60 @@
 							<div class="icon icon-resume"></div>
 						</div>
 						<div class="main-content">
-							<h1>MY RESUME</h1>
-							<div class="expirience col-lg-6"></div>
-							<div class="skills col-lg-5"></div>
+							
+							<h1 class="main-title">MY RESUME</h1>
+							<div class="row">
+								<div class="expirience col-lg-6">
+									<h2 class="container-info-title">EDUCATION</h2>
+									<div class="item-container">
+										<div class="ed-item">
+											<div class="case"></div>
+											<div class="ed-info">
+												<div class="ed-title">Курсы Maxymiser Academy <a href="http://vk.com/mmacademy">(link)</a></div>
+												<div class="ed-year">2014-2015</div>
+												<div class="ed-description">Three-month courses for beginning Web developers. He studied at the courses the basics of html, css, javascript. Learn the basics of Ajax requests and jQuery framework.</div>
+											</div>
+										</div>
+										<div class="ed-item">
+											<div class="case"></div>
+											<div class="ed-info">
+												<div class="ed-title">Курсы HTML Academy <a href="https://htmlacademy.ru">(link)</a></div>
+												<div class="ed-year">2015</div>
+												<div class="ed-description"></div>
+											</div>
+										</div>
+										<div class="ed-item">
+											<div class="case"></div>
+											<div class="ed-info">
+												<div class="ed-title">PrivatBank - Fundamentals of SQL</div>
+												<div class="ed-year">2014-2015</div>
+												<div class="ed-description">Three-month courses for beginning Web developers. He studied at the courses the basics of html, css, javascript. Learn the basics of Ajax requests and jQuery framework.</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="skills col-lg-5">
+									<h2 class="container-info-title">MY SKILLS</h2>
+									<div class="skill-item">
+										<h3 class="skill-title">HTML/CSS</h3>
+										<div class="skill-bar-main">
+											<div class="skill-bar-web"></div>
+										</div>
+									</div>
+									<div class="skill-item">
+										<h3 class="skill-title">jQuery</h3>
+										<div class="skill-bar-main">
+											<div class="skill-bar-js"></div>
+										</div>
+									</div>
+									<div class="skill-item">
+										<h3 class="skill-title">Bootstrap 3</h3>
+										<div class="skill-bar-main">
+											<div class="skill-bar-boot"></div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="portfolio col-lg-4 col-md-4 col-sm-4">
@@ -68,7 +122,6 @@
 							<div class="icon icon-portfolio"></div>
 						</div>
 						<div class="main-content">
-							
 						</div>
 					</div>
 					<div class="contact col-lg-4 col-md-4 col-sm-4">
