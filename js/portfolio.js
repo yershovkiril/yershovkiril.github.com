@@ -56,7 +56,7 @@
 					$(this).find('.resume-container').css('display', 'none');
 				}
 			});
-			$(this).find('.main-content').css('opacity', '1').css('padding', '30px').css('display', 'block').addClass('fadeInLeft');
+			$(this).find('.main-content').css('opacity', '1').css('padding', '30px').css('display', 'block').addClass('animated fadeInLeft');
 			$('.close-content').css('z-index', '10');
 			$(this).css('width', sizebox);
 		});

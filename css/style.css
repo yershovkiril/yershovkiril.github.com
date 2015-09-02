@@ -324,9 +324,3 @@ div.skills.col-lg-5{
 	border-bottom: 1px solid #ddd;
 	margin-left: 18px;
 }
-
-.main-content{
-  -vendor-animation-duration: 10s;
-  -vendor-animation-delay: 12s;
-  -vendor-animation-iteration-count: infinite;
-}
