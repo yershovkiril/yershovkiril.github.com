@@ -1,27 +1,37 @@
 'use strict';
-
+var mapDownload = false;
 (function() {
 	var text;
 	var array;
 	var textOnScreen = '';
 	var clocktimer;
 	var i = 0;
+	var clickClass;
+	var keyupTimeout;
 
 	function portfolio() {
+		validateForm();
 		text = "I'm Kiril. Front-end developer from Dnepropetrovsk, Ukraine. While not coding, I love to play basketball and play guitar.";
 		array = text.split('');
+		
+		//auto type text
 		clocktimer = window.setInterval(function() {
-			if (array[i+1] === undefined) {
+			if (array[i + 1] === undefined) {
 				clearInterval(clocktimer);
 			}
-			return typeText(); 
+			return typeText();
 		}, 70);
 
+		// slider move
+		$(function() {
+			$('.carousel').carousel({
+				interval: 3000
+			});
+		});
 		$('.features .col-lg-4').mouseenter(function(event) {
 			$(this).find('.detail').animate({
 				opacity: '1',
 				'margin-top': '-3px'
-
 			}, 200);
 			$(event.target).find('.icon').css('color', 'rgba(255,255,255, 1)');
 		}).mouseleave(function() {
@@ -33,12 +43,13 @@
 			$(event.target).find('.icon').css('color', 'rgba(255,255,255,.5)');
 		});
 
-		$('.download').mouseenter(function(event){
+		//hover effect for button 
+		$('.download').mouseenter(function(event) {
 			$(this).css('background-color', '#19A3D9');
 			$(this).css('border', '1px solid #19A3D9');
 			$(this).css('color', 'white');
 			$(this).find('.load-logo').css('color', 'white');
-		}).mouseleave(function(event){
+		}).mouseleave(function(event) {
 			$(this).css('background-color', 'white');
 			$(this).css('border', '1px solid #BBBBBB');
 			$(this).css('color', '#BBBBBB');
@@ -49,44 +60,114 @@
 			$(this).addClass("selected");
 			var row = $('.features .col-lg-4');
 			var sizebox = $('.features').css('width');
-			row.each(function(index,element) {
+			debugger
+			if ($(this).hasClass('resume')) {
+				$(this).find('.main-content').css('opacity', '1').css('padding', '30px').css('display', 'block').addClass('animated fadeInLeft');
+				clickClass = '.resume';
+			} else if ($(this).hasClass('portfolio')) {
+				$(this).find('.main-content').css('opacity', '1').css('padding', '30px').css('display', 'block').addClass('animated bounceIn');
+				clickClass = '.portfolio';
+			} else {
+				$(this).find('.main-content').css('opacity', '1').css('padding', '30px').css('display', 'block').addClass('animated fadeInRight');
+				clickClass = '.contact';
+			}
+			row.each(function(index, element) {
 				if (element.className.indexOf('selected') === -1) {
-						element.style.display = 'none';
+					element.style.display = 'none';
 				} else {
-					$(this).find('.resume-container').css('display', 'none');
+					$(this).find(clickClass + '-container').css('display', 'none');
 				}
 			});
-			$(this).find('.main-content').css('opacity', '1').css('padding', '30px').css('display', 'block').addClass('animated fadeInLeft');
 			$('.close-content').css('z-index', '10');
 			$(this).css('width', sizebox);
+			$(this).find('.main-content').css('height', "100%");
 		});
+		
+		//close 
 		$('.close-content').on('click', function(event) {
 			$('.main-content').css('display', 'none');
 			$(this).css('z-index', '0');
 			var row = $('.features .col-lg-4');
-			row.each(function(index,element) {
+			row.each(function(index, element) {
 				if (element.className.indexOf('selected') === -1) {
-						element.style.display = 'block';
+					element.style.display = 'block';
 				} else {
-					$(this).find('.resume-container').css('display', 'block');
+					$(this).find(clickClass + '-container').css('display', 'block');
 					$('.selected').css('width', 'none');
 					$(this).removeClass('selected');
 
 				}
 			});
+			mapDownload = false;
+		});
+	}
 
-		})
+	function validateForm() {
+		$('input').each(function(index, element) {
+			var keyupTimeout;
+			element.addEventListener('keyup', function(event) {
+				clearTimeout(keyupTimeout);
+				keyupTimeout = setTimeout(function() {
+					if (event.target.id === 'email') {
+						validateMail(event.target.value, element);
+					} else {
+						validateAll(event.target.value, element);
+					}
+				}, 700);
+			});
+		});
+
+		$('#comment').on('keyup', function(event) {
+			clearTimeout(keyupTimeout);
+			keyupTimeout = setTimeout(function() {
+					validateTextArea();
+				}, 700);
+		});
+
+		$('.send-mes').on('click', function() {
+			$('input').each(function(index, element) {
+				if(element.id === 'email') {
+					validateMail(element.value, element);
+				} else {
+					validateAll(element.value, element);
+				}
+					validateTextArea();
+				});
+				if ($('.error').length === 0) {
+					$('.send-mes').text('Sending...').css('background-color', '#19A3D9').css('border', '1px solid #19A3D9').css('color', 'white');
+				}
+			
+		});
+	}
+
+	function validateMail(text, element) {
+		if (/\w{1,}\d*\@\w{1,}\.\w{1,}/.test(text) !== true) {
+			element.className = 'error';
+		} else {
+			element.className = '';
+		}
+	}
+
+	function validateAll(text, element) {
+		if (text === '') {
+			element.className = 'error';
+		} else {
+			element.className = '';
+		}
+	}
+
+	function validateTextArea () {
+		if ($('#comment')[0].value === '') {
+			$('#comment').addClass('error');
+		} else {
+			$('#comment').removeClass('error');
+		}
 	}
 
 	function typeText() {
 		textOnScreen = textOnScreen + array[i];
-		i+=1;
+		i += 1;
 		$('.else-text').text(textOnScreen);
-		// array.forEach(function (element) {
-		// 	$('.else-text').text(textOnScreen);
-		// 	textOnScreen = textOnScreen + element;
-			
-		// })
 	}
 
 	window.portfolio = portfolio;

@@ -1,21 +1,17 @@
 @font-face {
     font-family: Billabong; /* Гарнитура шрифта */
-    src: url(./fonts/hpfluhSd.ttf); /* Путь к файлу со шрифтом */
+    src: url(../fonts/hpfluhSd.ttf); /* Путь к файлу со шрифтом */
 }
 @font-face {
     font-family: VellgishFont; /* Гарнитура шрифта */
-    src: url(./fonts/FAGhM22r.ttf); /* Путь к файлу со шрифтом */
+    src: url(../fonts/FAGhM22r.ttf); /* Путь к файлу со шрифтом */
 }
 
 @font-face {
     font-family: fectus!; /* Гарнитура шрифта */
-    src: url(./fonts/c31vSvDU.ttf); /* Путь к файлу со шрифтом */
+    src: url(../fonts/c31vSvDU.ttf); /* Путь к файлу со шрифтом */
 }
 
-@font-face {
-    font-family: APCCourier-Regular; /* Гарнитура шрифта */
-    src: url(./fonts/HxT18F53.ttf); /* Путь к файлу со шрифтом */
-}
 div h1{
 	font-family: 'VellgishFont', serif;
 	color: white;
@@ -27,6 +23,7 @@ div h1{
 @font-face {
   font-family: 'FontAwesome';
   src: url('http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.eot?v=4.1.0');
+  src: ;
   src: url('http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'), url('http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/onts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
@@ -265,7 +262,7 @@ a.social.linkedIn{
 
 }
 
-.item-container:before{
+content: "\f041";.item-container:before{
 	content: "";
     height: 100%;
     width: 3px;
@@ -318,9 +315,189 @@ a.social.linkedIn{
 }
 
 div.skills.col-lg-5{
-	padding-bottom: 40px;
-	margin-bottom: 30px;
+	
 	height: 100%;
+	
+}
+
+.skill-item:nth-child(4) {
+	padding-bottom: 60px;
+	margin-bottom: 40px;
 	border-bottom: 1px solid #ddd;
-	margin-left: 18px;
+}
+
+span.glyphicon{
+	font-family: FontAwesome;
+}
+.carousel-description{
+	height: 70px;
+	padding: 15px 20px;
+	background: #19A3D9;
+	color: white;
+	margin-top: 25px;
+	position: relative;
+	border-radius: 4px;
+}
+
+.carousel-description:before{
+	content: '';
+    position: absolute;
+    background: #19A3D9;
+    height: 18px;
+    width: 15px;
+    top: -8px;
+    left: 37px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+#carousel{
+	max-height: 185px;
+	width: 100%;
+}
+
+ol.carousel-indicators{
+	position: absolute;
+    bottom: -60px;
+}
+
+ol.carousel-indicators>li{
+	background-color: #EAEAEA;
+	width: 14px;
+    height: 14px;
+}
+
+ol.carousel-indicators>li.active{
+	background-color: #19A3D9;
+	width: 14px;
+    height: 14px;
+}
+
+img.big-boss-photo{
+	width: 85px;
+    height: 85px !important;
+    border-radius: 50px;
+}
+.name-boss{
+	position: absolute;
+    top: 20px;
+    left: 103px;
+    font-weight: bolder;
+}
+.company-name{
+	position: absolute;
+    top: 42px;
+    left: 103px;
+}
+
+.item{
+	border-radius: 4px;
+}
+.switch-category{
+	list-style: none;
+	padding-left: 0;
+}
+.switch-category>li{
+	display: inline-block;
+	margin-right: 15px;
+	padding: 10px 15px;
+	background-color: #EAEAEA;
+	color: #666666; 
+	font-weight: bolder;
+	cursor: pointer;
+}
+
+.switch-category>li.active{
+	background-color: #19A3D9;
+	color: white;
+}
+#map {
+    height: 100%;
+}
+.map-container{
+	width: 100%;
+	
+}
+address{
+	margin: 0;
+	background-color: #19A3D9;
+}
+input{
+	width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+textarea{
+	width: 100%;
+    padding: 9px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    height: 110px;
+}
+.send-mes{
+	padding: 13px;
+    border-radius: 4px;
+    font-weight: bolder;
+    background-color: #EAEAEA;
+    border: 1px solid #EAEAEA;
+    color: #717171;
+}
+
+.send-mes:hover{
+	padding: 11px;
+    border-radius: 4px;
+    background-color: #19A3D9;
+    border: 1px solid #19A3D9;
+    color: white;
+    font-weight: bolder;
+}
+
+#google-container{
+	margin-bottom: 30px;
+}
+
+.contact-info{
+	display: block;
+    margin-bottom: 12px;
+    color: #717171;
+    font-size: 17px;
+    margin-left: 25px;
+    position: relative;
+}
+.city:before{
+	content: "\f041";
+	font-family: FontAwesome;
+	color: #19A3D9;
+	position: absolute;
+	left: -22px;
+    font-size: 24px;
+    top: -5px;
+
+}
+.mail:before{
+	content: "\f003";
+	font-family: FontAwesome;
+	color: #19A3D9;
+	position: absolute;
+	left: -23px;
+    font-size: 18px;
+    top: -1px;
+
+}
+.phone:before{
+	content: "\f095";
+	font-family: FontAwesome;
+	color: #19A3D9;
+	position: absolute;
+	left: -22px;
+    font-size: 20px;
+    top: -4px;
+}
+.error{
+	border: 1px solid #e74c3c ;
+    background: url("../fonts/attention.svg") no-repeat;
+    background-size: 18px;
+    background-position: calc(100% - 15px) 15px;
+}
 }
