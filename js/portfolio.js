@@ -1,4 +1,5 @@
 'use strict';
+
 var mapDownload = false;
 (function() {
 	var text;
@@ -10,6 +11,13 @@ var mapDownload = false;
 	var keyupTimeout;
 
 	function portfolio() {
+		$(window).on('load', function() {
+			var $preloader = $('.preloader'),
+				$spinner = $preloader.find('.spinner');
+			$spinner.fadeOut();
+			$preloader.delay(150).fadeOut('fast');
+		});
+
 		validateForm();
 		text = "I'm Kiril. Front-end developer from Dnepropetrovsk, Ukraine. While not coding, I love to play basketball and play guitar.";
 		array = text.split('');
@@ -60,7 +68,6 @@ var mapDownload = false;
 			$(this).addClass("selected");
 			var row = $('.features .col-lg-4');
 			var sizebox = $('.features').css('width');
-			debugger
 			if ($(this).hasClass('resume')) {
 				$(this).find('.main-content').css('opacity', '1').css('padding', '30px').css('display', 'block').addClass('animated fadeInLeft');
 				clickClass = '.resume';
@@ -99,6 +106,44 @@ var mapDownload = false;
 				}
 			});
 			mapDownload = false;
+		});
+		//choose category in portfolio
+		$('.switch-category li').each(function(index, element){
+			element.addEventListener('click', function(event) {
+				$('.switch-category .active').removeClass('active');
+				element.className = 'active';
+				if (index === 1) {
+					if ($('.javascript-task').css('display') !== 'block') {
+						$('.javascript-task').css('display', 'block').addClass('animated zoomIn');
+						$('.page-proofs').css('display', 'none');	
+					} else {
+						$('.page-proofs').css('display', 'none');	
+					}
+					
+				} else if (index === 2) {
+					if ($('.page-proofs').css('display') !== 'block') {
+						$('.javascript-task').css('display', 'none');
+						$('.page-proofs').css('display', 'block').addClass('animated zoomIn');
+					} else {
+						$('.javascript-task').css('display', 'none');
+					}
+					
+				} else {
+					$('.javascript-task').css('display', 'block');
+					$('.page-proofs').css('display', 'block');
+				}
+			});
+		});
+		//hover effect for task
+		$('.portfolio .main-content a').mouseenter(function(event) {
+			$(this).find('h1').css('opacity', '1');
+			$(this).find('h4').css('opacity', '1').addClass('animated bounceInLeft');
+			$(this).next().css('margin-left', '0').css('border-radius', '4px').css('width', '100%').addClass('animated flipInX');
+		}).mouseleave(function(event){
+			$(this).find('h1').css('opacity', '0');
+			$(this).find('h4').css('opacity', '0').removeClass('animated bounceInLeft');
+			$(this).next().css('margin-left', '60px').css('border-radius', '150px').css('width', '280px').removeClass('animated flipInX');
+			
 		});
 	}
 
