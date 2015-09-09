@@ -529,7 +529,7 @@ textarea{
 
 .javascript-task a:hover, .page-proofs a:hover{
 	background: rgba(0,0,0,.75);
-	border-radius: 4px;
+	border-radius: 30px;
 }
 .javascript-task img, .page-proofs img{
 	width: 280px;

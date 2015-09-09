@@ -138,7 +138,7 @@ var mapDownload = false;
 		$('.portfolio .main-content a').mouseenter(function(event) {
 			$(this).find('h1').css('opacity', '1');
 			$(this).find('h4').css('opacity', '1').addClass('animated bounceInLeft');
-			$(this).next().css('margin-left', '0').css('border-radius', '4px').css('width', '100%').addClass('animated flipInX');
+			$(this).next().css('margin-left', '0').css('border-radius', '30px').css('width', '100%').addClass('animated flipInX');
 		}).mouseleave(function(event){
 			$(this).find('h1').css('opacity', '0');
 			$(this).find('h4').css('opacity', '0').removeClass('animated bounceInLeft');
