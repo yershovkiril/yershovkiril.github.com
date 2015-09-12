@@ -21,7 +21,7 @@ var mapDownload = false;
 		validateForm();
 		text = "I'm Kiril. Front-end developer from Dnepropetrovsk, Ukraine. While not coding, I love to play basketball and play guitar.";
 		array = text.split('');
-		
+
 		//auto type text
 		clocktimer = window.setInterval(function() {
 			if (array[i + 1] === undefined) {
@@ -89,7 +89,7 @@ var mapDownload = false;
 			$(this).css('width', sizebox);
 			$(this).find('.main-content').css('height', "100%");
 		});
-		
+
 		//close 
 		$('.close-content').on('click', function(event) {
 			$('.main-content').css('display', 'none');
@@ -108,18 +108,18 @@ var mapDownload = false;
 			mapDownload = false;
 		});
 		//choose category in portfolio
-		$('.switch-category li').each(function(index, element){
+		$('.switch-category li').each(function(index, element) {
 			element.addEventListener('click', function(event) {
 				$('.switch-category .active').removeClass('active');
 				element.className = 'active';
 				if (index === 1) {
 					if ($('.javascript-task').css('display') !== 'block') {
 						$('.javascript-task').css('display', 'block').addClass('animated zoomIn');
-						$('.page-proofs').css('display', 'none');	
+						$('.page-proofs').css('display', 'none');
 					} else {
-						$('.page-proofs').css('display', 'none');	
+						$('.page-proofs').css('display', 'none');
 					}
-					
+
 				} else if (index === 2) {
 					if ($('.page-proofs').css('display') !== 'block') {
 						$('.javascript-task').css('display', 'none');
@@ -127,7 +127,7 @@ var mapDownload = false;
 					} else {
 						$('.javascript-task').css('display', 'none');
 					}
-					
+
 				} else {
 					$('.javascript-task').css('display', 'block');
 					$('.page-proofs').css('display', 'block');
@@ -138,12 +138,12 @@ var mapDownload = false;
 		$('.portfolio .main-content a').mouseenter(function(event) {
 			$(this).find('h1').css('opacity', '1');
 			$(this).find('h4').css('opacity', '1').addClass('animated bounceInLeft');
-			$(this).next().css('margin-left', '0').css('border-radius', '30px').css('width', '100%').addClass('animated flipInX');
-		}).mouseleave(function(event){
+			$(this).next().css('margin-left', '0').addClass('animated flipInX');
+		}).mouseleave(function(event) {
 			$(this).find('h1').css('opacity', '0');
 			$(this).find('h4').css('opacity', '0').removeClass('animated bounceInLeft');
-			$(this).next().css('margin-left', '60px').css('border-radius', '150px').css('width', '280px').removeClass('animated flipInX');
-			
+			$(this).next().removeClass('animated flipInX');
+
 		});
 	}
 
@@ -165,23 +165,23 @@ var mapDownload = false;
 		$('#comment').on('keyup', function(event) {
 			clearTimeout(keyupTimeout);
 			keyupTimeout = setTimeout(function() {
-					validateTextArea();
-				}, 700);
+				validateTextArea();
+			}, 700);
 		});
 
 		$('.send-mes').on('click', function() {
 			$('input').each(function(index, element) {
-				if(element.id === 'email') {
+				if (element.id === 'email') {
 					validateMail(element.value, element);
 				} else {
 					validateAll(element.value, element);
 				}
-					validateTextArea();
-				});
-				if ($('.error').length === 0) {
-					$('.send-mes').text('Sending...').css('background-color', '#19A3D9').css('border', '1px solid #19A3D9').css('color', 'white');
-				}
-			
+				validateTextArea();
+			});
+			if ($('.error').length === 0) {
+				$('.send-mes').text('Sending...').css('background-color', '#19A3D9').css('border', '1px solid #19A3D9').css('color', 'white');
+			}
+
 		});
 	}
 
@@ -201,7 +201,7 @@ var mapDownload = false;
 		}
 	}
 
-	function validateTextArea () {
+	function validateTextArea() {
 		if ($('#comment')[0].value === '') {
 			$('#comment').addClass('error');
 		} else {

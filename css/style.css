@@ -32,6 +32,9 @@ div.about-me{
 	padding-right: 0;
 	border-right: 1px solid #ddd;
 }
+.profile{
+    display: none;
+}
 .row {
 	margin: 0;
 }
@@ -115,8 +118,10 @@ div.about-me{
 
 .hi {
 	padding: 0 75px;
-	height: 140px;
-	border-bottom: 1px solid #ddd;
+	min-height: 140px;
+    height: 100%;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
 }
 
 .button{
@@ -409,7 +414,6 @@ img.big-boss-photo{
 .switch-category{
 	list-style: none;
 	padding-left: 0;
-	margin-bottom: 30px;
 }
 .switch-category>li{
 	display: inline-block;
@@ -522,6 +526,7 @@ textarea{
     left: 0;
     margin-right: 10px;
     width: 100%;
+    max-width: 419px;
     height: 100%;
     z-index: 1000;
 }
@@ -530,12 +535,16 @@ textarea{
 .javascript-task a:hover, .page-proofs a:hover{
 	background: rgba(0,0,0,.75);
 	border-radius: 30px;
+    width: 100%;
+    max-width: 419px;
+    margin-left: 0px;
 }
 .javascript-task img, .page-proofs img{
-	width: 280px;
+	width: 100%;
+    max-width: 419px;
 	height: 280px;
-	border-radius: 150px;
-	margin-left: 60px;
+	border-radius: 30px;
+	
 }
 .javascript-task>div, .page-proofs>div{
 	margin-right: 20px;
@@ -620,4 +629,65 @@ div.page{
     transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   }
+}
+
+.slider-native, .timer-taglist{
+    margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .resume, .portfolio, .contact{
+        width: 100% !important; 
+        height: 25vh !important;
+    }
+
+    .about-me{
+        height: 25vh !important;
+    }
+    .features{
+        height:75vh !important;
+    }
+
+    .greeting, .button, .footer-content, .detail{
+        display: none !important;
+    }
+    div.top-portfolio > h1, div.top-resume > h1, div.top-contact > h1{
+        text-align: left !important;
+        margin-top: 10.5vh !important;
+        margin-left: 5vh !important;
+        font-size: 30px;
+        position: relative;
+}
+    div.icon{
+        font-size: 40px;   
+        top: 32%;
+        bottom: 33%px;
+        left: 93%;
+        position: absolute;
+
+    }
+    .summary>a, .summary>.dev{
+        display: none !important;
+    }
+/*    div.photo{
+        position: relative;
+    }*/
+    .summary{
+        border: none;
+        margin: 0;
+    }
+    img.portfolio-img{
+        position: absolute;
+        top: 27% ; 
+        right: 15px;
+        width: 75px;
+    }
+    .profile{
+        display: block;
+        color: black;
+        position: absolute;
+        top: 15%;
+        left: 30px;
+    }
 }

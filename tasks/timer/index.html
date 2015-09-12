@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Stopwatch & tag list</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="./js/timer.js"></script>
+</head>
+<body>
+<div class="task-description">
+	<a class="description">Просмотреть описание задания</a></br>
+	<div class="pict-description">
+		<img src="task_for_timer.png" alt="">
+	</div>
+	<a href="#" class="git">ссылка на Github</a>
+</div>
+	<div class="container">
+		<span>Упраление с клавиатуры: Start - S, Lap - L, Reset - R</span>
+	</div>
+<iframe src="./taglist/index.html" width="100%" height="700px" marginheight="50px" frameborder="0"></iframe>
+
+	<script>
+	(function(){
+	window.sw = new stopWatch();
+	}());
+	</script>
+</body>
+</html>
