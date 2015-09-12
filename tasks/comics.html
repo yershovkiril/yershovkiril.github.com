@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Automatically download comics</title>
+	<script src="slider/jquery-1.10.2.min.js"></script>
+	<style>
+		.description{
+	    position: absolute;
+    top: 10px;
+    left: 100px;
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+.git{
+	position: absolute;
+    top: 30px;
+    color: #428bca;
+    text-decoration: none;
+    left: 100px;
+}
+
+.pict-description > img{
+    width: 55%;
+    margin: 40px 0 0 80px;
+    display: block;
+}
+h5{
+ 	margin-top: 40px;
+ }
+	</style>
+</head>
+<body>
+	<div class="task-description">
+	<a class="description">Скрыть описание задания</a></br>
+	<div class="pict-description">
+		<img src="task_comics.png" alt="">
+	</div>
+	<a href="#" class="git">ссылка на Github</a>
+	<h5>Для демонстрации код расположенный на Github необходимо скопировать в консоль находясь на странице http://explosm.net . При скроле вниз комиксы будут загружаться автоматически, по аналогии с лентой в соц. сетях (vk, facebook)</h5>
+	<script>
+		$('a.description').on('click', function(element) {
+			if ($('.pict-description').find('img').css('display') === 'none') {
+				$('.pict-description').find('img').css('display', 'block');
+				$('a.description').text('Скрыть описание задания');
+			} else {
+				$('.pict-description').find('img').css('display', 'none');
+				$('a.description').text('Показать описание задания');
+			}
+		});
+	</script>
+</div>
+</body>
+</html>
