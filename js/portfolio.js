@@ -19,7 +19,7 @@ var mapDownload = false;
 		});
 
 		validateForm();
-		text = "I'm Kiril. Front-end developer from Dnepropetrovsk, Ukraine. While not coding, I love to play basketball and play guitar.";
+		text = "I'm Kiril. Front-end developer from Dnepropetrovsk, Ukraine. When I do not program I love to play basketball and play guitar.";
 		array = text.split('');
 
 		//auto type text

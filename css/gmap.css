@@ -6,6 +6,11 @@
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
+
+div.gmnoprint > .gmnoprint{
+  top: -40px !important;
+}
+
 @media only screen and (min-width: 768px) {
   #google-container {
     height: 400px;
